@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/card_flip.iml" filepath="$PROJECT_DIR$/card_flip.iml" />
+      <module fileurl="file://$PROJECT_DIR$/card_flip_android.iml" filepath="$PROJECT_DIR$/card_flip_android.iml" />
+    </modules>
+  </component>
+</project>
