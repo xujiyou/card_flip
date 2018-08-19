@@ -100,15 +100,15 @@ class _CardFlipper extends State<CardFlipper> with TickerProviderStateMixin{
   void _onHorizontalDragUpdate(DragUpdateDetails details) {
     final currDrag = details.globalPosition;
     final dragDistance = currDrag.dx - startDrag.dx;
-    final signalCardDragDistance = dragDistance / context.size.width;
+    final allCardDragDistance = dragDistance / context.size.width;
     final numCards = widget.cards.length;
-    if (signalCardDragDistance > 0) {
+    if (allCardDragDistance > 0) {
       direction = Direction.LEFT;
     } else {
       direction = Direction.RIGHT;
     }
     setState(() {
-      scrollPercent = (startDragPercentScroll + (- signalCardDragDistance / numCards)).clamp(0.0, 1.0 - (1 / numCards));
+      scrollPercent = (startDragPercentScroll + (- allCardDragDistance / numCards)).clamp(0.0, 1.0 - (1 / numCards));
       widget.onScroll(scrollPercent);
     });
   }
